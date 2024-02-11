@@ -1,4 +1,4 @@
-rootProject.name = "kmp-gradle-skeleton"
+rootProject.name = "kmp-preferences-example"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
