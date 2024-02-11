@@ -1,4 +1,4 @@
-# KMP Gradle Skeleton 
+# KMP Preferences Example
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
