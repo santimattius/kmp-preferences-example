@@ -28,6 +28,11 @@ kotlin {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
         }
+        androidMain.dependencies {
+            implementation("androidx.core:core-ktx:1.12.0")
+            implementation("androidx.security:security-crypto:1.0.0")
+            implementation("androidx.preference:preference-ktx:1.2.1")
+        }
     }
 }
 
