@@ -3,14 +3,28 @@ import Shared
 
 struct ContentView: View {
     
-    let kvs = Kvs(definition: KvsDefinition(name: "", encrypted: false))
+    @State private var viewModel = ContentViewModel(
+        kvs: Kvs(
+            definition: KvsDefinition(
+                name: "group.com.santimattius.kvs"
+            )
+        )
+    )
+    
     var body: some View {
         VStack {
-            
-            Image(systemName: "swift")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("SwiftUI: \(Greeting().greet())")
+            Text(viewModel.text)
+            Button(viewModel.showImage ? "Hide" : "Show"){
+                withAnimation {
+                    viewModel.onTap()
+                }
+            }
+            if(viewModel.showImage){
+                Image("Swift")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .transition(.scale)
+            }
         }
         .padding()
     }

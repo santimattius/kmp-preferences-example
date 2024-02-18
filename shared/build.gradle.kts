@@ -29,9 +29,9 @@ kotlin {
             // put your Multiplatform dependencies here
         }
         androidMain.dependencies {
-            implementation("androidx.core:core-ktx:1.12.0")
-            implementation("androidx.security:security-crypto:1.0.0")
-            implementation("androidx.preference:preference-ktx:1.2.1")
+            implementation(libs.androidx.core.ktx)
+            implementation(libs.androidx.security.crypto)
+            implementation(libs.androidx.preference.ktx)
         }
     }
 }

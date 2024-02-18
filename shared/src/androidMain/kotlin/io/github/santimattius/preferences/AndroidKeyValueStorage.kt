@@ -35,7 +35,7 @@ internal class AndroidKeyValueStorage(
     }
 
 
-    override fun edit(): KvsReader.KvsEditor {
+    override fun edit(): KeyValueStorage.KvsEditor {
         return AndroidKvsEditor(sharedPreferences)
     }
 

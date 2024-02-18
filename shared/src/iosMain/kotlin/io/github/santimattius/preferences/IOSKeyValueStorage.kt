@@ -5,6 +5,7 @@ import platform.Foundation.NSUserDefaults
 internal class IOSKeyValueStorage(
     private val userDefaults: NSUserDefaults
 ) : KeyValueStorage {
+
     override val all: Map<String, Any>
         get() = userDefaults.dictionaryRepresentation()
             .filter { it.key != null && it.value != null }
@@ -30,13 +31,12 @@ internal class IOSKeyValueStorage(
         return userDefaults.boolForKey(key) ?: defValue
     }
 
-    override fun edit(): KvsReader.KvsEditor {
+    override fun edit(): KeyValueStorage.KvsEditor {
         return IOSKvsEditor(userDefaults)
     }
 
     override fun contains(key: String): Boolean {
         return userDefaults.dictionaryRepresentation().containsKey(key)
     }
-
 
 }
