@@ -2,6 +2,16 @@
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
+## Swift
+
+![swift-kvs](https://github.com/santimattius/kmp-preferences-example/assets/22333101/1e8bf443-00bc-4b91-9a66-c41ddc52f02a)
+
+## Kotlin
+
+![kotlin-kvs](https://github.com/santimattius/kmp-preferences-example/assets/22333101/d91c11e4-a1ac-4038-a9c0-46e859566a2b)
+
+## Structure
+
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
   - `commonMain` is for code that’s common for all targets.
